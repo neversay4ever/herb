@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{%block content%}
+    {% comment %} 
+    {{object.herb_id}} 
+    {{object.herb_name}} 
+    {{object.herb_name_note}}
+    {{object.tissue_id}}
+    {{object.seq_id}} 
+    {{object.collection_tissue}} 
+    {{object.collection_tissue_detail}} 
+    {{object.collection_location}} 
+    {{object.collection_datetime}} 
+    {{object.collector}} 
+    {{object.lattitude}} 
+    {{object.longitude}}
+    {{object.elevation}} 
+    {{object.sample_pic_name}} 
+    {{object.field_store_condition}} 
+    {{object.field_store_duration}} 
+    {{object.temporary_store_condition}} 
+    {{object.transport_datetime}} 
+    {{object.transport_store_condition}} 
+    {{object.receiver}} 
+    {{object.receive_datetime}} 
+    {{object.sample_count}} 
+    {{object.sample_total_weight}} 
+    {{object.sample_notes}} 
+    {{object.sample_batch_notes}} 
+    {{object.sequencing_sample_id}} 
+    {{object.sequencing_length_type}} 
+    {{object.barcode_id}} 
+    {{object.chip_id}}
+    {{object.lane_id}} 
+    {{object.sequencing_platform}}
+    {{object.fq1_path}}
+    {{object.fq2_path}} 
+    {% endcomment %}
+
+        <div class="jumbotron">
+        <div class="container">
+          <h2 class="text-success display-3">{{object.herb_name}} </h2>
+          <h4 class="display-6">   数量：   {{object.sample_count|floatformat:"0"}} </h4>
+
+          <p>{{object.gongneng}}</p>
+          <p class="btn btn-primary btn-sm">测序平台 </p>        {{object.sequencing_platform}}
+          <p class="btn btn-success btn-sm">测序组织 </p>    {{object.collection_tissue}} 
+          <p class="btn btn-info btn-sm">采集地 </p>    {{object.collection_location}}     
+         <p class="btn btn-info btn-sm">经度 </p>    {{object.longitude}} 
+         <p class="btn btn-info btn-sm">纬度 </p>    {{object.lattitude}} 
+         <p class="btn btn-info btn-sm">海拔 </p>    {{object.elevation}} 
+
+<p>
+          <p class="btn btn-warning btn-sm">测序文件路径fq1 </p>        {{object.fq1_path}}
+          <p class="btn btn-warning btn-sm">测序文件路径fq1 </p>        {{object.fq1_path}}
+</p>
+        </div>
+      </div>
+<p>  </p>
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-6">
+            <h4>{{object.herb_name}}-植物图</h4>
+            <img class="img-fluid rounded mb-4 mb-lg-0 " src="{{ MEDIA_URL }}/{{object.herb_id|floatformat:"0"|slugify}}{{object.herb_name}}-植物.png" >
+          </div>
+          <div class="col-md-6">
+            <h4>{{object.herb_name}}-药材图</h4>
+    <img class="img-fluid rounded mb-4 mb-lg-0 " src="{{ MEDIA_URL }}/{{object.herb_id|floatformat:"0"|slugify}}{{object.herb_name}}-药材.png" >
+          </div>
+        </div>
+
+{%endblock content%}

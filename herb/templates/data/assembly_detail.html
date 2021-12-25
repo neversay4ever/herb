@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%block content%}
+    <div class="jumbotron">
+        <div class="container">
+          <h2 class="text-success display-3">{{object.gene_id}} </h2>
+
+          <p class="btn btn-primary btn-sm">长度 </p>    {{object.gene_length}}
+         <p></p>
+          <p class="btn btn-danger btn-sm">序列 </p>    
+          <div class='card-body w-75 text-wrap text-break '>
+          {{object.gene_seq|wordwrap:5|linebreaksbr}}
+          </div>
+        </div>
+      </div>
+
+{%endblock content%}

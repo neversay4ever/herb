@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{%block content%}
+    <div class="jumbotron">
+        <div class="container">
+          <h2 class="text-success display-3">{{object.herb_name}} </h2>
+            <h4 class="display-6">  {{object.herb_pinyin}}</h4>
+
+          <p>{{object.gongneng}}</p>
+          <p class="btn btn-primary btn-sm">性 </p>    {{object.nature}}
+          <p class="btn btn-success btn-sm">味 </p>    {{object.taste}}
+          <p class="btn btn-info btn-sm">归经 </p>    {{object.guijing}}
+          <p class="btn btn-danger btn-sm">是否道地药材 </p>    {{object.daodi_or_not}}
+
+        </div>
+      </div>
+<p>  </p>
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-6">
+            <h4>{{object.herb_name}}-植物图</h4>
+            <img class="img-fluid rounded mb-4 mb-lg-0 " src="{{ MEDIA_URL }}/{{object.herb_id}}{{object.herb_name}}-植物.png" >
+          </div>
+          <div class="col-md-6">
+            <h4>{{object.herb_name}}-药材图</h4>
+    <img class="img-fluid rounded mb-4 mb-lg-0 " src="{{ MEDIA_URL }}/{{object.herb_id}}{{object.herb_name}}-药材.png" >
+          </div>
+        </div>
+
+{%endblock content%}

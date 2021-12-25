@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%block content%}
+
+    <h3 class='display-6 text-success'>测序样本列表</h3>
+
+
+    {% if object_list %}
+    <ul class="list-group">
+
+      {% for sample in object_list %}
+      <li class="list-group-item">
+      <span class='text-secondary'> {{ sample.herb_id }} - </span> <a href="/data/sample/{{ sample.id}}">{{ sample.herb_name }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>没有测序样本</p>
+    {% endif %} 
+
+
+{%endblock content%}

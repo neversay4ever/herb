@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+
+      {% block content %}
+       <div class="container px-4 px-lg-5">
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{{ MEDIA_URL }}/data.jpeg" alt="data" /></div>
+                <div class="col-lg-5">
+                    <h1 class="font-weight-light ">中草药大数据平台</h1>
+                    <p>药⽤植物种质基因资源是国家重要⽣物战略资源，是世界各国的争夺对象，也是中医药可持续发展的物质基础。第二代测序技术的快速发展，已使基因测序逐渐成为生物学研究的常规手段。与基因组不同，转录组是反映个体在特定器官、组织或某一特定发育阶段细胞中所有基因表达水平的数据，特别适⽤于发现和鉴定与植物药效功能相关的基因及研究基因表达的调控机制。本数据库平台主要收录川产道地药材转录组数据及其分析结果。
+</p>
+                    <a class="btn btn-warning fs-4" href="/admin">数据管理</a>
+                </div>
+              
+            </div>
+            <!-- Call to Action-->
+            <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body"><h3 class="text-white m-0">如果我们比别人看得更远，那是因为我们站在
+基因组的基石之上。</h3></div>
+            </div>
+            <!-- Content Row-->
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">物种信息</h4>
+                            <p class="card-text">收录88种川产道地药材的物种描述信息</p>
+                        </div>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href='/data/species'>浏览</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">样本信息</h4>
+                            <p class="card-text">收录部分川产道地药材和其它中草药共计300份测序样本的信息</p>
+                        </div>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href='/data/samples'>浏览</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">分析结果</h4>
+                            <p class="card-text">针对部分测序物种的深入生物信息分析，涵盖基因组装序列数据，各类注释信息如COG、KEGG、KOG、NR、SwissProt、Pfam等</p>
+                        </div>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href='/data/analysis'">浏览</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; 四川省中医药科学院 2021</p></div>
+        </footer>
+      {% endblock content %}
