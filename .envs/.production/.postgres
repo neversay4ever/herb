@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=herb
+POSTGRES_USER=UnPSGBQrTMyyYXLYmnmjxbIAcdaUprIC
+POSTGRES_PASSWORD=jd5oHywLenkJYv0NLMJKBQktt1ubf7YfKQbMNAg6K5hU2xIFadixO0tdAa8wU1yw
